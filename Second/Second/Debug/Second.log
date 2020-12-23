@@ -1,0 +1,3 @@
+﻿  연습.c
+연습.obj : error LNK2005: _main이(가) Second.obj에 이미 정의되어 있습니다.
+C:\Users\안민혁\source\repos\Second\Debug\Second.exe : fatal error LNK1169: 여러 번 정의된 기호가 있습니다.
