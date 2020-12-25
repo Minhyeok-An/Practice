@@ -2,13 +2,19 @@
 
 int main()
 {
-	int a, b;
-	
-	for (; ; )
-	{
-		printf("더할 두 수를 입력 (멈추려면 Ctrl+C) : ");
-		scanf("%d %d", &a, &b);
+	int i, k;
 
-		printf("%d + %d = %d \n", a, b, a + b);
+	for (i = 2; i <=9 ; i++)
+		printf(" #제%d단#", i);
+
+	printf("\n\n");
+
+	for (i = 1; i <= 9; i++)
+	{
+		for (k = 2; k <= 9; k++)
+		{
+			printf("%2dX%2d=%2d", k, i, k * i);
+		}
+		printf("\n");
 	}
 }
