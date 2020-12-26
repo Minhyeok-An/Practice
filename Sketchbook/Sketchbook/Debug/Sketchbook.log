@@ -1,3 +1,6 @@
 ﻿  Sketchbook.c
-C:\Users\안민혁\Desktop\c공부\Sketchbook\Sketchbook\Sketchbook.c(15,3): warning C4996: 'scanf': This function or variable may be unsafe. Consider using scanf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+C:\Users\안민혁\Desktop\c공부\Sketchbook\Sketchbook\Sketchbook.c(8,9): warning C4477: 'printf' : 서식 문자열 '%d'에 'int' 형식의 인수가 필요하지만 variadic 인수 1의 형식이 'int *'입니다.
+C:\Users\안민혁\Desktop\c공부\Sketchbook\Sketchbook\Sketchbook.c(8,9): warning C4477: 'printf' : 서식 문자열 '%d'에 'int' 형식의 인수가 필요하지만 variadic 인수 2의 형식이 'int *'입니다.
+C:\Users\안민혁\Desktop\c공부\Sketchbook\Sketchbook\Sketchbook.c(8,9): warning C4477: 'printf' : 서식 문자열 '%d'에 'int' 형식의 인수가 필요하지만 variadic 인수 3의 형식이 'int *'입니다.
+C:\Users\안민혁\Desktop\c공부\Sketchbook\Sketchbook\Sketchbook.c(8,9): warning C4477: 'printf' : 서식 문자열 '%d'에 'int' 형식의 인수가 필요하지만 variadic 인수 4의 형식이 'int *'입니다.
   Sketchbook.vcxproj -> C:\Users\안민혁\Desktop\c공부\Sketchbook\Debug\Sketchbook.exe
