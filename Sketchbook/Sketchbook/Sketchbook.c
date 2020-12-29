@@ -3,27 +3,39 @@
 
 int main()
 {
-	int s[10] = { 2,3,5,7,8,9,0,1,4,6 };
+	int s[10];
 	int i, k, tmp;
 
 	int* p;
 	p = s;
 
-	for (i = 0;i < 9;i++)
+	for (i = 0;i < 10;i++)
 	{
-		for (k = i;k < 9;k++)
+		printf("s[%d] 데이터: ", i);
+		scanf("%d", &*(p+i));
+	}
+	
+	printf("정렬 전 배열s ==>");
+
+	for (i = 0; i < 10; i++)
+		printf(" %d", *(p + i));
+
+	printf("\n");
+
+	for (i = 0; i < 9; i++)
+	{
+		for (k = i + 1; k < 10; k++)
 		{
-			if (*(p + i) > *(p + k))
+			if (*(p + k) < *(p + i))
 			{
-				tmp = *(p + i);
-				*(p + i) = *(p + k);
-				*(p + k) = tmp;
+				tmp = *(p + k);
+				*(p + k) = *(p + i);
+				*(p + i) = tmp;
 			}
 		}
 	}
-	
-	for (i = 0;i < 10;i++)
-	{
-		printf("%d", *(p + 1));
-	}
+	printf("정렬 후 배열s ==>");
+		
+	for(i=0;i<10;i++)
+		printf(" %d", *(p+i));
 }
