@@ -1,41 +1,29 @@
 #include <stdio.h>
-#include <string.h>
+
+char change(char);
 
 int main()
 {
-	int s[10];
-	int i, k, tmp;
+	char input[100];
+	int i;
 
-	int* p;
-	p = s;
+	printf("문자열을 입력<100자 이내> : ");
+	scanf("%s", input);
 
-	for (i = 0;i < 10;i++)
+	for (i = 0; input[i]; i++)
 	{
-		printf("s[%d] 데이터: ", i);
-		scanf("%d", &*(p+i));
+		printf("%c", change(input[i]));
 	}
-	
-	printf("정렬 전 배열s ==>");
+}
 
-	for (i = 0; i < 10; i++)
-		printf(" %d", *(p + i));
-
-	printf("\n");
-
-	for (i = 0; i < 9; i++)
+char change(char in)
+{
+	if (in >= 'a' && in <= 'z')
 	{
-		for (k = i + 1; k < 10; k++)
-		{
-			if (*(p + k) < *(p + i))
-			{
-				tmp = *(p + k);
-				*(p + k) = *(p + i);
-				*(p + i) = tmp;
-			}
-		}
+		in = in - ('a' - 'A');
 	}
-	printf("정렬 후 배열s ==>");
-		
-	for(i=0;i<10;i++)
-		printf(" %d", *(p+i));
+	else if (in >= 'A' && in <= 'Z')
+	{
+		in = in + ('a' - 'A');
+	}
 }
