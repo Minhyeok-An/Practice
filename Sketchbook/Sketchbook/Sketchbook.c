@@ -1,29 +1,41 @@
 #include <stdio.h>
 
-char change(char);
-
 int main()
 {
-	char input[100];
-	int i;
+	char a;
+	int b, plus;
 
-	printf("문자열을 입력<100자 이내> : ");
-	scanf("%s", input);
+	scanf("%c %d", &a, &b);
 
-	for (i = 0; input[i]; i++)
+	if (a >= 'A' && a <= 'Z')
 	{
-		printf("%c", change(input[i]));
+		plus = b % ('Z' - 'A' + 1);
+		a = a + plus;
+		if (a >= 'A' && a <= 'Z')
+		{
+			printf("%c", a);
+		}
+		else
+		{
+			printf("%c", a - ('Z' - 'A' + 1));
+		}
 	}
-}
+	else if (a >= 'a' && a <= 'z')
+	{
+		plus = b % ('z' - 'a' + 1);
+		a = a + plus;
+		if (a >= 'a' && a <= 'z')
+		{
+			printf("%c", a);
+		}
+		else
+		{
+			printf("%c", a - ('z' - 'a' + 1));
+		}
+	}
+	else
+	{
+		printf("%c", a);
+	}
 
-char change(char in)
-{
-	if (in >= 'a' && in <= 'z')
-	{
-		in = in - ('a' - 'A');
-	}
-	else if (in >= 'A' && in <= 'Z')
-	{
-		in = in + ('a' - 'A');
-	}
 }
